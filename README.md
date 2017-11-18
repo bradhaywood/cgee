@@ -49,6 +49,12 @@ int main(void)
 }
 ```
 
+## Tips
+
+* Requests like `body_params` and `query_params` are actually just associative maps, so you can use `.size()` to get the number of keys, and `.count("key")` to see if a specific key exists.
+
+* `init_cgee()` is essential as it includes the page header behind the scenes, and also generates the query/build params
+
 ## Compiling
 
 There are no external libraries, so you can just compile directly
