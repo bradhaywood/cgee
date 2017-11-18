@@ -20,7 +20,8 @@ std::vector<std::string> tokenize(std::string const &in, char sep='&')
     return result;
 }
 
-void generate_body_params(void) {
+void generate_body_params(void)
+{
     int length = atoi(getenv("CONTENT_LENGTH"));
     if (length > 0) {
         char tmp[length+1];
