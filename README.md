@@ -53,7 +53,11 @@ int main(void)
 
 * Requests like `body_params` and `query_params` are actually just associative maps, so you can use `.size()` to get the number of keys, and `.count("key")` to see if a specific key exists.
 
-* `init_cgee()` is essential as it includes the page header behind the scenes, and also generates the query/build params
+* `init_cgee()` is essential as it includes the page header behind the scenes, and also generates the query/build params.
+
+* ONLY use `start_session()` if you plan on actually using sessions. This function checks to make sure the appropriate directory exists, creates a session token if one does not exist, or reads an existing one. It's just a loss of performance if you don't really need it.
+
+* The default path for sessions is `../sessions`, but you can change that prior to compiling in `includes/session.h` and changing the `const char *session_path` value.
 
 ## Compiling
 
