@@ -53,7 +53,7 @@ int main(void)
 
 There are no external libraries, so you can just compile directly
 
-```cpp
+```bash
 g++ -o test.cgi test.cpp
 ```
 
